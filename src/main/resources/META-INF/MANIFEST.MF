@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+FMLCorePlugin: com.pinball3d.networkdebugger.core.NetworkDebuggerLoadingPlugin
+

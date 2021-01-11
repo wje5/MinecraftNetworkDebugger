@@ -1,0 +1,16 @@
+[
+{
+  "modid": "network_debugger",
+  "name": "Network Debugger",
+  "description": "A debugger used for analyze modded minecraft network.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["3DPinball"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
