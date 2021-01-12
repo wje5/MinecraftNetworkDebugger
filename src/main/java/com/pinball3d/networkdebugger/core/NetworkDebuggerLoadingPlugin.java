@@ -11,6 +11,7 @@ public class NetworkDebuggerLoadingPlugin implements IFMLLoadingPlugin {
 	public static final String MODID = "network_debugger_core";
 	public static final String NAME = "Network Debugger Core";
 	public static final String VERSION = "1.0.0";
+	public static boolean runtimeDeobf;
 
 	@Override
 	public String[] getASMTransformerClass() {
@@ -29,7 +30,7 @@ public class NetworkDebuggerLoadingPlugin implements IFMLLoadingPlugin {
 
 	@Override
 	public void injectData(Map<String, Object> data) {
-
+		runtimeDeobf = ((Boolean) data.get("runtimeDeobfuscationEnabled")).booleanValue();
 	}
 
 	@Override

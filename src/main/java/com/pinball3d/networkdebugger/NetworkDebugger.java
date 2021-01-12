@@ -3,8 +3,6 @@ package com.pinball3d.networkdebugger;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.client.network.NetHandlerPlayClient;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
@@ -32,13 +30,6 @@ public class NetworkDebugger {
 			NetworkRegistry registry = NetworkRegistry.INSTANCE;
 			Map<String, FMLEmbeddedChannel> channels = new HashMap<String, FMLEmbeddedChannel>();
 			registry.channelNamesFor(Side.CLIENT).forEach(e -> channels.put(e, registry.getChannel(e, Side.CLIENT)));
-
-			// Vanilla
-			NetHandlerPlayClient netHandlerPlayClient = (NetHandlerPlayClient) FMLClientHandler.instance()
-					.getClientPlayHandler();
-			if (netHandlerPlayClient != null) {
-//				System.out.println(netHandlerPlayClient.getNetworkManager().channel());
-			}
 		}
 	}
 }
